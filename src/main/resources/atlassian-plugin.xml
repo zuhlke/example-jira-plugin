@@ -22,7 +22,7 @@
   <web-item name="metrics-page-item" i18n-name-key="metrics--page--item.name" key="metrics--page--item" section="jira.project.sidebar.plugins.navigation" weight="1000">
     <description key="metrics--page--item.description">Menu item for Metrics Page</description>
     <icon width="32" height="32">
-      <link linkId="metrics--page--item-icon">/jira/download/resources/${atlassian.plugin.key}:myPlugin3-resources/images/arrows.png</link>
+      <link linkId="metrics--page--item-icon">${baseurl}/download/resources/${atlassian.plugin.key}:myPlugin3-resources/images/arrows.png</link>
     </icon>
     <label key="metrics--page--item.label"/>
     <link linkId="metrics--page--item-link">/projects/$pathEncodedProjectKey?selectedItem=com.atlassian.jira.jira-projects-plugin:metrics-page</link>
