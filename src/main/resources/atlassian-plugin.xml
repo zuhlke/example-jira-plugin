@@ -1,24 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
-    <plugin-info>
-        <description>${project.description}</description>
-        <version>${project.version}</version>
-        <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
-    </plugin-info>
+  <plugin-info>
+    <description>${project.description}</description>
+    <version>${project.version}</version>
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    <param name="plugin-icon">images/pluginIcon.png</param>
+    <param name="plugin-logo">images/pluginLogo.png</param>
+  </plugin-info>
+  <!-- add our i18n resource -->
+  <resource type="i18n" name="i18n" location="myPlugin3"/>
+  <!-- add our web resources -->
+  <web-resource key="myPlugin3-resources" name="myPlugin3 Web Resources">
+    <dependency>com.atlassian.auiplugin:ajs</dependency>
+    <resource type="download" name="myPlugin3.css" location="/css/myPlugin3.css"/>
+    <resource type="download" name="myPlugin3.js" location="/js/myPlugin3.js"/>
+    <resource type="download" name="images/" location="/images"/>
+    <context>myPlugin3</context>
+  </web-resource>
 
-    <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="myPlugin3"/>
-    
-    <!-- add our web resources -->
-    <web-resource key="myPlugin3-resources" name="myPlugin3 Web Resources">
-        <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
-        <resource type="download" name="myPlugin3.css" location="/css/myPlugin3.css"/>
-        <resource type="download" name="myPlugin3.js" location="/js/myPlugin3.js"/>
-        <resource type="download" name="images/" location="/images"/>
+  <web-item name="metrics-page-item" i18n-name-key="metrics--page--item.name" key="metrics--page--item" section="jira.project.sidebar.plugins.navigation" weight="1000">
+    <description key="metrics--page--item.description">Menu item for Metrics Page</description>
+    <icon width="32" height="32">
+      <link linkId="metrics--page--item-icon">/jira/download/resources/${atlassian.plugin.key}:myPlugin3-resources/images/arrows.png</link>
+    </icon>
+    <label key="metrics--page--item.label"/>
+    <link linkId="metrics--page--item-link">/projects/$pathEncodedProjectKey?selectedItem=com.atlassian.jira.jira-projects-plugin:metrics-page</link>
+  </web-item>
 
-        <context>myPlugin3</context>
-    </web-resource>
-    
+  <web-panel name="metrics-page" i18n-name-key="metrics--page.name" key="metrics--page" location="com.atlassian.jira.jira-projects-plugin:metrics-page" weight="1000">
+    <description key="metrics--page.description">The metrics-page Plugin</description>
+    <context-provider class="com.zuhlke.training.jira.impl.MetricsInfoImpl"/>
+    <resource name="view" type="velocity" location="templates/tabpanels/metrics-tab-panel.vm"/>
+  </web-panel>
+
 </atlassian-plugin>

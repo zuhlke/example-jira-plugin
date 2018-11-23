@@ -1,0 +1,26 @@
+<div class="mod-header">
+    <h3>$i18n.getText('metrics-tab-panel.label')</h3>
+    <table>
+        <tr>
+            <td>Name</td><td>$project.name</td>
+        </tr>
+        <tr>
+            <td>Key</td><td>$project.key</td>
+        </tr>
+        <tr>
+            <td>Description</td><td>$project.description</td>
+        </tr>
+        <tr>
+            <td>Project Lead Key</td><td>$project.lead.key</td>
+        </tr>
+        <tr>
+            <td>Project Lead Name</td><td>$project.lead.name</td>
+        </tr>
+        <tr>
+            <td>Project Lead Display Name</td><td>$project.lead.displayName</td>
+        </tr>
+        <tr>
+            <td>Project Lead Email Address</td><td>$project.lead.emailAddress</td>
+        </tr>
+    </table>
+</div>
