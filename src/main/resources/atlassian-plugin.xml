@@ -25,11 +25,11 @@
       <link linkId="metrics--page--item-icon">${baseurl}/download/resources/${atlassian.plugin.key}:myPlugin3-resources/images/arrows.png</link>
     </icon>
     <label key="metrics--page--item.label"/>
-    <link linkId="metrics--page--item-link">/projects/$pathEncodedProjectKey?selectedItem=com.atlassian.jira.jira-projects-plugin:metrics-page</link>
+    <link linkId="metrics--page--item-link">/projects/${pathEncodedProjectKey}?selectedItem=com.atlassian.jira.jira-projects-plugin:metrics-page</link>
   </web-item>
 
   <web-panel name="metrics-page" i18n-name-key="metrics--page.name" key="metrics--page" location="com.atlassian.jira.jira-projects-plugin:metrics-page" weight="1000">
-    <description key="metrics--page.description">The metrics-page Plugin</description>
+    <description key="metrics--page.description">Agile Metrics page</description>
     <context-provider class="com.zuhlke.training.jira.impl.MetricsInfoImpl"/>
     <resource name="view" type="velocity" location="templates/tabpanels/metrics-tab-panel.vm"/>
   </web-panel>
