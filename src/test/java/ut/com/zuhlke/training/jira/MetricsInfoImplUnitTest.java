@@ -21,7 +21,7 @@ import static com.zuhlke.training.jira.api.MetricsInfo.PROJECT;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class MetricsInfoImplTest {
+public class MetricsInfoImplUnitTest {
 
     @Rule
     public MockitoContainer mockitoContainer = MockitoMocksInContainer.rule(this);
