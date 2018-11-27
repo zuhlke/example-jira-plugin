@@ -3,6 +3,17 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <bundle-instructions>
+            <Import-Package>
+                com.atlassian.jira.plugin.webfragment.model;resolution:="optional",
+                com.atlassian.jira.user.util;resolution:="optional",
+                com.atlassian.jira.util.collect;resolution:="optional",
+                com.atlassian.jira.util;resolution:="optional",
+                org.springframework.osgi.*;resolution:="optional",
+                org.eclipse.gemini.blueprint.*;resolution:="optional",
+                *;version="0";resolution:="optional"
+            </Import-Package>
+        </bundle-instructions>
     </plugin-info>
 
     <!-- from our base plugin -->

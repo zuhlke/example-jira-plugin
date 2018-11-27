@@ -33,6 +33,11 @@ public class MetricsInfoImpl extends AbstractJiraContextProvider implements Metr
     }
 
     @Override
+    public UserProjectHistoryManager getUserProjectHistoryManager() {
+        return this.userProjectHistoryManager;
+    }
+
+    @Override
     public Map getContextMap(ApplicationUser applicationUser, JiraHelper jiraHelper) {
         Map<String, Object> contextMap = new HashMap<>();
 
