@@ -9,20 +9,20 @@
     <param name="plugin-logo">images/pluginLogo.png</param>
   </plugin-info>
   <!-- add our i18n resource -->
-  <resource type="i18n" name="i18n" location="myPlugin3"/>
+  <resource type="i18n" name="i18n" location="myPlugin"/>
   <!-- add our web resources -->
-  <web-resource key="myPlugin3-resources" name="myPlugin3 Web Resources">
+  <web-resource key="myPlugin-resources" name="myPlugin Web Resources">
     <dependency>com.atlassian.auiplugin:ajs</dependency>
-    <resource type="download" name="myPlugin3.css" location="/css/myPlugin3.css"/>
-    <resource type="download" name="myPlugin3.js" location="/js/myPlugin3.js"/>
+    <resource type="download" name="myPlugin.css" location="/css/myPlugin.css"/>
+    <resource type="download" name="myPlugin.js" location="/js/myPlugin.js"/>
     <resource type="download" name="images/" location="/images"/>
-    <context>myPlugin3</context>
+    <context>myPlugin</context>
   </web-resource>
 
   <web-item name="metrics-page-item" i18n-name-key="metrics--page--item.name" key="metrics--page--item" section="jira.project.sidebar.plugins.navigation" weight="1000">
     <description key="metrics--page--item.description">Menu item for Metrics Page</description>
     <icon width="32" height="32">
-      <link linkId="metrics--page--item-icon">${baseurl}/download/resources/${atlassian.plugin.key}:myPlugin3-resources/images/arrows.png</link>
+      <link linkId="metrics--page--item-icon">${baseurl}/download/resources/${atlassian.plugin.key}:myPlugin-resources/images/arrows.png</link>
     </icon>
     <label key="metrics--page--item.label"/>
     <link linkId="metrics--page--item-link">/projects/${pathEncodedProjectKey}?selectedItem=com.atlassian.jira.jira-projects-plugin:metrics-page</link>

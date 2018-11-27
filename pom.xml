@@ -3,14 +3,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.zuhlke.training.jira</groupId>
-    <artifactId>myPlugin3</artifactId>
+    <artifactId>myPlugin</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <organization>
         <name>Zuhlke Engineering Ltd.</name>
         <url>https://www.zuhlke.co.uk/</url>
     </organization>
-    <name>myPlugin3</name>
-    <description>This is the com.zuhlke.training.jira:myPlugin3 plugin for Atlassian JIRA.</description>
+    <name>myPlugin</name>
+    <description>This is the com.zuhlke.training.jira:myPlugin plugin for Atlassian JIRA.</description>
     <packaging>atlassian-plugin</packaging>
     <dependencies>
         <dependency>
@@ -145,11 +145,11 @@
                             <artifactId>jira-testkit-plugin</artifactId>
                             <version>${testkit.version}</version>
                         </pluginArtifact>
-                        <pluginArtifact>
-                            <groupId>com.zuhlke.jira.util</groupId>
-                            <artifactId>jirafastdevreplacement</artifactId>
-                            <version>1.0.0-SNAPSHOT</version>
-                        </pluginArtifact>
+                        <!--<pluginArtifact>-->
+                            <!--<groupId>com.zuhlke.jira.util</groupId>-->
+                            <!--<artifactId>jirafastdevreplacement</artifactId>-->
+                            <!--<version>1.0.0-SNAPSHOT</version>-->
+                        <!--</pluginArtifact>-->
                     </pluginArtifacts>
                     <enableQuickReload>true</enableQuickReload>
                     <enableFastdev>false</enableFastdev>
