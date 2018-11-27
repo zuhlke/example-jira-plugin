@@ -145,6 +145,11 @@
                             <artifactId>jira-testkit-plugin</artifactId>
                             <version>${testkit.version}</version>
                         </pluginArtifact>
+                        <pluginArtifact>
+                            <groupId>com.zuhlke.jira.util</groupId>
+                            <artifactId>jirafastdevreplacement</artifactId>
+                            <version>1.0.0-SNAPSHOT</version>
+                        </pluginArtifact>
                     </pluginArtifacts>
                     <enableQuickReload>true</enableQuickReload>
                     <enableFastdev>false</enableFastdev>
