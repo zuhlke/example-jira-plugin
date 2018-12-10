@@ -148,7 +148,7 @@
                         <pluginArtifact>
                             <groupId>com.zuhlke.testing</groupId>
                             <artifactId>atlassian-plugin-test-console-enabler</artifactId>
-                            <version>1.0.0</version>
+                            <version>1.0.1</version>
                         </pluginArtifact>
                     </pluginArtifacts>
                     <enableQuickReload>true</enableQuickReload>
